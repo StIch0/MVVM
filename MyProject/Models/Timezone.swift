@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import ObjectMapper
+class Timezone: Mappable{
+    var offset: String!
+    var description: String!
+    required init?(map: Map) {
+        
+    }
+    func mapping(map: Map) {
+        offset<-map["offset"]
+        description<-map["description"]
+    }
+}

@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import ObjectMapper
+
+class Id: Mappable {
+    var name: String!
+    var value: String!
+    required init?(map: Map) {
+        
+    }
+    func mapping(map: Map) {
+        name<-map["name"]
+        value<-map["value"]
+    }
+}
