@@ -8,7 +8,13 @@
 
 import Foundation
 import ObjectMapper
-class User: Mappable {
+import CoreData
+
+struct User: Mappable {
+    init?(map: Map) {
+
+    }
+
     var gender: String!
     var name: Name!
     var location: Location!
@@ -21,12 +27,8 @@ class User: Mappable {
     var id: Id!
     var picture: Picture!
     var nat: String!
-    
-    required init?(map: Map) {
-        
-    }
-    
-    func mapping(map: Map) {
+
+    mutating func mapping(map: Map) {
         gender<-map["gender"]
         name<-map["name"]
         location<-map["location"]
@@ -41,4 +43,11 @@ class User: Mappable {
     }
     
     
+}
+
+class SaveUser: NSManagedObject {
+    var user: User!
+    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 import ObjectMapper
-class Login: Mappable {
+struct Login: Mappable {
     var uuid: String!
     var username: String!
     var password: String!
@@ -16,10 +16,10 @@ class Login: Mappable {
     var md5: String!
     var sha1: String!
     var sha256: String!
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         uuid<-map["uuid"]
         username<-map["username"]
         password<-map["password"]

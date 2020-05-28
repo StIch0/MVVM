@@ -8,14 +8,14 @@
 
 import Foundation
 import ObjectMapper
-class Timezone: Mappable{
+struct Timezone: Mappable{
     var offset: String!
-    var description: String!
-    required init?(map: Map) {
+    var descriptionZone: String!
+    init?(map: Map) {
         
     }
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         offset<-map["offset"]
-        description<-map["description"]
+        descriptionZone<-map["description"]
     }
 }

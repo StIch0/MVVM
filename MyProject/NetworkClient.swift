@@ -9,21 +9,20 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import RxCocoa
+import RxSwift
 
-class NetworkClient : NSObject {
-    lazy var users : Array = {
-        return [User]()
+class NetworkClient : API {
+    
+    lazy var users : BehaviorRelay<[User]> = {
+        return BehaviorRelay(value: [])
     }()
-    func downloadUser (complete : @escaping DownloadComplete){
-        Alamofire.request(Constants.API_URL.rawValue).responseObject{
+
+    func downloadUser (complete : @escaping DownloadComplete) {
+        Alamofire.request(Constants.API_URL.rawValue).responseObject {
             (response : DataResponse<UserResponse> ) in
-            let list  = response.result.value
-            
-             if let userModel = list?.users {
-                for (_ , user) in userModel.enumerated() {
-                    self.users.append(user)
-                }
-            }
+            let list  = response.result.value?.users
+            self.users.accept(list ?? [])
             complete()
         }
     }

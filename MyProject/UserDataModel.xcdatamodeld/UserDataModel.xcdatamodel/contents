@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Coordinates" representedClassName="Coordinates" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Dob" representedClassName="Dob" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Id" representedClassName="Id" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="coordinates" optional="YES" attributeType="Transformable" customClassName=".Coordinates"/>
+        <attribute name="postalcode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="street" optional="YES" attributeType="String"/>
+        <attribute name="timezone" optional="YES" attributeType="Transformable" customClassName=".Timezone"/>
+    </entity>
+    <entity name="Login" representedClassName="Login" syncable="YES">
+        <attribute name="md5" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="salt" optional="YES" attributeType="String"/>
+        <attribute name="sha1" optional="YES" attributeType="String"/>
+        <attribute name="sha256" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Name" representedClassName=".Name" parentEntity="User" syncable="YES">
+        <attribute name="first" optional="YES" attributeType="String"/>
+        <attribute name="last" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Picture" representedClassName="Picture" syncable="YES">
+        <attribute name="large" optional="YES" attributeType="String"/>
+        <attribute name="medium" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Registered" representedClassName="Registered" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaveUser" representedClassName=".SaveUser" syncable="YES">
+        <attribute name="user" optional="YES" attributeType="Transformable" customClassName=".User"/>
+    </entity>
+    <entity name="Timezone" representedClassName="Timezone" syncable="YES">
+        <attribute name="descriptionZone" optional="YES" attributeType="String"/>
+        <attribute name="offset" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="dob" optional="YES" attributeType="Transformable" customClassName=".Dob"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Transformable" customClassName=".Id"/>
+        <attribute name="location" optional="YES" attributeType="Transformable" customClassName=".Location"/>
+        <attribute name="login" optional="YES" attributeType="Transformable" customClassName=".Login"/>
+        <attribute name="name" optional="YES" attributeType="Transformable" customClassName="Name"/>
+        <attribute name="picture" optional="YES" attributeType="Transformable" customClassName=".Picture"/>
+        <attribute name="registered" optional="YES" attributeType="Transformable" customClassName=".Registered"/>
+    </entity>
+    <elements>
+        <element name="Coordinates" positionX="0" positionY="90" width="128" height="73"/>
+        <element name="Dob" positionX="36" positionY="144" width="128" height="73"/>
+        <element name="Id" positionX="0" positionY="99" width="128" height="73"/>
+        <element name="Location" positionX="-36" positionY="36" width="128" height="133"/>
+        <element name="Login" positionX="18" positionY="99" width="128" height="148"/>
+        <element name="Name" positionX="-54" positionY="9" width="128" height="88"/>
+        <element name="Picture" positionX="9" positionY="108" width="128" height="88"/>
+        <element name="Registered" positionX="-9" positionY="90" width="128" height="73"/>
+        <element name="Timezone" positionX="-18" positionY="81" width="128" height="73"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="SaveUser" positionX="-9" positionY="90" width="128" height="58"/>
+    </elements>
+</model>

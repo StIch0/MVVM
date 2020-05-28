@@ -6,6 +6,13 @@ target 'MyProject' do
   use_frameworks!
 	pod 'Alamofire'	
   pod 'AlamofireObjectMapper'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+# add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
+# add pods for any other desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
   # Pods for MyProject
 
   target 'MyProjectTests' do

@@ -9,13 +9,14 @@
 import Foundation
 import ObjectMapper
 
-class Registered: Mappable {
+struct Registered: Mappable {
     var date: String!
     var age: Int!
-    required init?(map: Map) {
+
+    init?(map: Map) {
         
     }
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         date<-map["date"]
         age<-map["age"]
     }

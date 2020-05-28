@@ -9,12 +9,12 @@
 import Foundation
 import ObjectMapper
 
-class UserResponse :Mappable{
+struct UserResponse :Mappable{
     var users: Array<User>!
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         users<-map["results"]
     }
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 enum Constants: String {
-    case API_URL = "http://api.randomuser.me/?results=10&nat=e"
+    case API_URL = "http://api.randomuser.me/?results=50&nat=e"
 }
 typealias DownloadComplete = ()->()

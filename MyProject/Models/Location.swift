@@ -8,17 +8,18 @@
 
 import Foundation
 import ObjectMapper
-class Location : Mappable{
+struct Location : Mappable{
     var street: String!
     var city: String!
     var state: String!
     var postalcode: Int!
     var coordinates: Coordinates!
     var timezone: Timezone!
-    required init?(map: Map) {
+
+    init?(map: Map) {
         
     }
-      func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         street<-map["street"]
         city<-map["city"]
         state<-map["state"]

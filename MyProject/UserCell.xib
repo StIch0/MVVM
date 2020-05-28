@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoCell" customModule="MyProject" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserInfoCell" customModule="MyProject">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-il-mSq">
+                    <rect key="frame" x="5" y="5" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="Ya9-af-hwa"/>
+                        <constraint firstAttribute="width" constant="70" id="kkl-0b-SR5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enq-fa-KQv">
+                    <rect key="frame" x="80" y="15" width="334" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="z89-r2-FYL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSl-Dj-jEc">
+                    <rect key="frame" x="80" y="44" width="334" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="qfC-6y-XsD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Enq-fa-KQv" firstAttribute="leading" secondItem="2rb-il-mSq" secondAttribute="trailing" constant="5" id="18W-8c-wUW"/>
+                <constraint firstItem="2rb-il-mSq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="2rg-WC-Vkh"/>
+                <constraint firstItem="2rb-il-mSq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Lk3-l0-IYS"/>
+                <constraint firstItem="2rb-il-mSq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="VmQ-7B-t1f"/>
+                <constraint firstItem="wSl-Dj-jEc" firstAttribute="leading" secondItem="2rb-il-mSq" secondAttribute="trailing" constant="5" id="XqJ-Rw-QKq"/>
+                <constraint firstItem="wSl-Dj-jEc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="byh-c5-EPn"/>
+                <constraint firstAttribute="trailing" secondItem="Enq-fa-KQv" secondAttribute="trailing" id="d6l-Tg-wen"/>
+                <constraint firstItem="Enq-fa-KQv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="dN8-ej-spe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2rb-il-mSq" secondAttribute="bottom" constant="5" id="kjy-to-Bvj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wSl-Dj-jEc" secondAttribute="bottom" constant="15" id="o5B-em-xjE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="userImage" destination="2rb-il-mSq" id="Qzx-6g-0hL"/>
+                <outlet property="userName" destination="Enq-fa-KQv" id="kFV-Vl-nDX"/>
+                <outlet property="userSecondName" destination="wSl-Dj-jEc" id="6xi-PK-ZbT"/>
+            </connections>
+            <point key="canvasLocation" x="113.04347826086958" y="81.696428571428569"/>
+        </view>
+    </objects>
+</document>

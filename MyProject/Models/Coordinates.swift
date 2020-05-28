@@ -8,13 +8,14 @@
 
 import Foundation
 import ObjectMapper
-class Coordinates:Mappable{
+struct Coordinates:Mappable{
     var latitude: String!
     var longitude: String!
-    required init?(map: Map) {
+
+    init?(map: Map) {
         
     }
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         latitude<-map["latitude"]
         longitude<-map["longitude"]
     }
