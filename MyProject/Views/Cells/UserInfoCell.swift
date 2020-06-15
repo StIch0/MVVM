@@ -11,7 +11,7 @@ import UIKit
 
 class UserInfoCell: UITableViewCell {
 
-    static let cellId: String = "cellId"
+    static let cellId: String = "UserInfoCell"
 
     private let nibName: String = "UserCell"
 

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import AuthenticationServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,13 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigator: UINavigationController!
     var storyBoard: UIStoryboard!
 
+    var coordinator: MainCoordinator?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let controller: UIViewController = storyBoard.instantiateViewController(withIdentifier: "MainViewController")
-        navigator = UINavigationController(rootViewController: controller as! MainViewController)
+        navigator = UINavigationController()
+
+        coordinator = MainCoordinator(navigationController: navigator)
+
+        coordinator?.start()
+
         window?.rootViewController = navigator
         window?.makeKeyAndVisible()
+
+//        let rootRouter: RootViewControllerRouter = RootViewControllerRouter()
+//
+//        if #available(iOS 13.0, *) {
+//            rootRouter.start(window: window!)
+//        } else {
+//            rootRouter.startAuth(window: window!)
+//        }
 
         FirebaseApp.configure()
 

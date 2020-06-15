@@ -17,7 +17,12 @@ class MapRouter: Router {
     func route(to routeId : Controllers, params: Any?) {
         switch routeId {
         case .main:
-            pop()
+            let controller = self.storyBoard.create(with: routeId.rawValue, type: MainViewController.self)
+            print("MapRouter::route \(params as! Int)")
+            let userViewModel = UserViewModel(params as! Int)
+            userViewModel.onNextSegment(params as! Int)
+            controller.changeViewModel(userViewModel)
+            pop(with: AnimateNavigator(navigator))
         default:
             break
         }

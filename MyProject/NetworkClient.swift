@@ -21,6 +21,7 @@ class NetworkClient : API {
     func downloadUser (complete : @escaping DownloadComplete) {
         Alamofire.request(Constants.API_URL.rawValue).responseObject {
             (response : DataResponse<UserResponse> ) in
+            print(Constants.API_URL.rawValue)
             let list  = response.result.value?.users
             self.users.accept(list ?? [])
             complete()
